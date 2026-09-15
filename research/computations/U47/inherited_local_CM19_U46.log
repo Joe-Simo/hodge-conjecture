@@ -1,0 +1,13 @@
+test_01_target_and_new_word_are_hodge (__main__.U46Tests.test_01_target_and_new_word_are_hodge) ... ok
+test_02_exact_34_term_transport (__main__.U46Tests.test_02_exact_34_term_transport) ... ok
+test_03_all_conjugates_and_source_admissibility (__main__.U46Tests.test_03_all_conjugates_and_source_admissibility) ... ok
+test_04_correct_cover_scaling (__main__.U46Tests.test_04_correct_cover_scaling) ... ok
+test_05_cm_dimensions_and_fields (__main__.U46Tests.test_05_cm_dimensions_and_fields) ... ok
+test_06_exterior_merge_is_nonzero_and_has_24_lines (__main__.U46Tests.test_06_exterior_merge_is_nonzero_and_has_24_lines) ... ok
+test_07_no_divisor_pairing_shortcut (__main__.U46Tests.test_07_no_divisor_pairing_shortcut) ... ok
+test_08_invalid_inputs_and_perturbed_certificate (__main__.U46Tests.test_08_invalid_inputs_and_perturbed_certificate) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.009s
+
+OK

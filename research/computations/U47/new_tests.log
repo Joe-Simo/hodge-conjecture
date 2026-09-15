@@ -1,0 +1,14 @@
+test_both_explicit_surface_maps (__main__.U47Tests.test_both_explicit_surface_maps) ... ok
+test_constant_curve_types_and_imprimitive_control (__main__.U47Tests.test_constant_curve_types_and_imprimitive_control) ... ok
+test_cover_actions_and_connectedness (__main__.U47Tests.test_cover_actions_and_connectedness) ... ok
+test_cover_genera (__main__.U47Tests.test_cover_genera) ... ok
+test_discriminant_and_all_finite_nodal_parameters (__main__.U47Tests.test_discriminant_and_all_finite_nodal_parameters) ... ok
+test_elliptic_normalization_invariant (__main__.U47Tests.test_elliptic_normalization_invariant) ... ok
+test_monodromy_all_base_change_indices (__main__.U47Tests.test_monodromy_all_base_change_indices) ... ok
+test_reject_invalid_inputs (__main__.U47Tests.test_reject_invalid_inputs) ... ok
+test_unique_double_root_and_normalization (__main__.U47Tests.test_unique_double_root_and_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.035s
+
+OK

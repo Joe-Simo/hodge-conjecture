@@ -1,0 +1,8 @@
+{
+  "tool": "Wolfram.WolframLanguageEvaluator",
+  "timeConstraint": 30,
+  "raw_text": "Out[1]= <|\"Version\" -> \"15.0.1 for Linux x86 (64-bit) (July 2, 2026)\", \"Discriminant\" -> 3125 + 256*t$83489^35, \"DiscriminantSquarefree\" -> True, \"NodeFactorIdentity\" -> True, \"CubicDiscriminant\" -> -200*r$83489^6, \"CubicAtNode\" -> 10*r$83489^3, \"UniqueRootChecks\" -> {True, True}, \"SmoothingDerivative\" -> 7*r$83489*t$83489^6, \"NilpotentRank\" -> 1, \"NilpotentSquareZero\" -> True, \"AllIndexCompositionIdentity\" -> True, \"SymplecticIdentity\" -> True, \"CMStabilizers\" -> {{1}, {1}}, \"ImprimitiveControl\" -> {1, 2, 4}, \"ProductMapResiduals\" -> {0, 0}, \"CoverGenera\" -> {31, 32}, \"ConstantFibreGenera\" -> {2, 3}|>",
+  "input_file": "independent_wolfram.wl",
+  "input_note": "Whitespace-formatted copy of the stateless evaluated expression; local Module suffixes are kernel generated.",
+  "interpretation": "All returned exact identities agree with the SymPy checks. This is separate arithmetic corroboration, not an independent geometric proof."
+}

@@ -1,0 +1,56 @@
+{
+  "status": "specified exact algebraic checks passed; geometric proof self-reviewed separately",
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "coefficient_domains": [
+    "Q",
+    "Q(i)",
+    "integer unit groups modulo 5 and 7"
+  ],
+  "tests": 9,
+  "failures": 0,
+  "errors": 0,
+  "runtime_seconds": 0.034988147999911234,
+  "nodal_discriminant": "256*t**35 + 3125",
+  "finite_nodal_parameters": 35,
+  "node_factor": "4*r**3 + 3*r**2*u + 2*r*u**2 + u**3",
+  "node_factor_discriminant": "-200*r**6",
+  "node_normalization_j": 160,
+  "cm_types": {
+    "5": [
+      1,
+      2
+    ],
+    "7": [
+      1,
+      2,
+      3
+    ]
+  },
+  "cm_stabilizers": {
+    "5": [
+      1
+    ],
+    "7": [
+      1
+    ]
+  },
+  "covers": {
+    "S5": {
+      "degree": 10,
+      "base_genus": 31,
+      "fibre_genus": 2
+    },
+    "S7": {
+      "degree": 14,
+      "base_genus": 32,
+      "fibre_genus": 3
+    }
+  },
+  "nonclaims": [
+    "No original Hodge class was represented.",
+    "Tests do not prove Picard-Lefschetz or Picard/Jacobian comparison.",
+    "No exclusion of correspondences dominating both base parameters.",
+    "No numerical approximation, random sampling, or formal proof kernel was used."
+  ]
+}

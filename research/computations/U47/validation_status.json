@@ -1,0 +1,72 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "commands": [
+    {
+      "label": "new_tests",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "research/computations/U47/verify_u47.py",
+        "--output",
+        "research/computations/U47/verification.json"
+      ],
+      "cwd": "/mnt/data/hodge-conjecture",
+      "exit_code": 0,
+      "seconds": 0.9594143569999005,
+      "log": "research/computations/U47/new_tests.log"
+    },
+    {
+      "label": "inherited_local_CM19_U46",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "research/computations/U46/verify_u46.py"
+      ],
+      "cwd": "/mnt/data/hodge-conjecture",
+      "exit_code": 0,
+      "seconds": 0.6038850500000308,
+      "log": "research/computations/U47/inherited_local_CM19_U46.log"
+    },
+    {
+      "label": "syntax",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "py_compile",
+        "research/computations/U47/verify_u47.py"
+      ],
+      "cwd": "/mnt/data/hodge-conjecture",
+      "exit_code": 0,
+      "seconds": 0.589452209000001,
+      "log": "research/computations/U47/syntax.log"
+    },
+    {
+      "label": "lint",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "research/computations/U47/verify_u47.py"
+      ],
+      "cwd": "/mnt/data/hodge-conjecture",
+      "exit_code": 1,
+      "seconds": 0.5972550989999945,
+      "log": "research/computations/U47/lint.log"
+    },
+    {
+      "label": "typecheck",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "mypy",
+        "research/computations/U47/verify_u47.py"
+      ],
+      "cwd": "/mnt/data/hodge-conjecture",
+      "exit_code": 1,
+      "seconds": 0.6090250589999187,
+      "log": "research/computations/U47/typecheck.log"
+    }
+  ],
+  "interpretation": "Nine new exact tests and eight distinct local CM19 U46 tests pass. Syntax passes. Lint and static type checking were attempted but their modules are absent. No unavailable-tool success is claimed.",
+  "remote_Horikawa_U46": "Proof read from GitHub at 50cbb2c7839121abc193f57ced6e880ed4e4a23b; not the inherited local checker."
+}
