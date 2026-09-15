@@ -1,0 +1,21 @@
+{
+  "execution": "WolframLanguageEvaluator, separate stateless invocation in this session",
+  "input": "independent_wolfram.wl",
+  "time_constraint_seconds": 30,
+  "output_transcription": {
+    "Version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+    "CertificateResidual": [0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0],
+    "CertificateTerms": 31,
+    "ReflectionCoefficientSum": 0,
+    "SquareCertificateValid": true,
+    "ThreeOrder": 12,
+    "GeneratorsSpanUnits": true,
+    "All24TransportedDifferences": true,
+    "All576MixedCertificates": true,
+    "AllNewDHPartialMultiplesNonzero": true,
+    "OrbitDimension": 24,
+    "DiagonalSquareCharacterNontrivial": true
+  },
+  "limitations": "Arithmetic execution is separate from Python; mathematical interpretation and review use the same assistant.",
+  "prior_discarded_attempt": "The initial invocation wrote #al instead of #*al in its orbit-count display. Function::slot1 messages and an invalid count1 resulted. That count was not accepted; the complete input was corrected and rerun without messages to give24. The certificate residual was separately rechecked in the clean run."
+}

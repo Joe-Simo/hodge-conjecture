@@ -1,0 +1,15 @@
+test_all_24_conjugate_difference_certificates (__main__.U43Tests.test_all_24_conjugate_difference_certificates) ... ok
+test_all_576_mixed_tensor_certificates (__main__.U43Tests.test_all_576_mixed_tensor_certificates) ... ok
+test_diagonal_restriction_retains_only_opposite_pairs (__main__.U43Tests.test_diagonal_restriction_retains_only_opposite_pairs) ... ok
+test_generators_cover_exactly_all_units (__main__.U43Tests.test_generators_cover_exactly_all_units) ... ok
+test_geometric_admissibility_at_every_used_transport (__main__.U43Tests.test_geometric_admissibility_at_every_used_transport) ... ok
+test_hodge_types_and_projector_dimensions (__main__.U43Tests.test_hodge_types_and_projector_dimensions) ... ok
+test_inherited_square_certificate (__main__.U43Tests.test_inherited_square_certificate) ... ok
+test_new_integral_certificate_and_negative_control (__main__.U43Tests.test_new_integral_certificate_and_negative_control) ... ok
+test_no_single_target_from_the_same_relation_presentation (__main__.U43Tests.test_no_single_target_from_the_same_relation_presentation) ... ok
+test_reject_invalid_inputs (__main__.U43Tests.test_reject_invalid_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.051s
+
+OK

@@ -1,0 +1,30 @@
+{
+  "new_tests": {
+    "argv": ["python", "research/computations/U43/verify_u43.py", "--output", "research/computations/U43/verification.json"],
+    "returncode": 0,
+    "runtime_seconds": 0.606282,
+    "log": "new_tests.log",
+    "status": "passed"
+  },
+  "syntax": {
+    "argv": ["python", "-m", "py_compile", "research/computations/U43/verify_u43.py", "research/computations/U43/discover_u43.py"],
+    "returncode": 0,
+    "runtime_seconds": 0.61165,
+    "log": "syntax.log",
+    "status": "passed"
+  },
+  "lint": {
+    "argv": ["python", "-m", "ruff", "check", "research/computations/U43/verify_u43.py", "research/computations/U43/discover_u43.py"],
+    "returncode": 1,
+    "runtime_seconds": 0.613151,
+    "log": "lint.log",
+    "status": "unavailable"
+  },
+  "typecheck": {
+    "argv": ["python", "-m", "mypy", "--ignore-missing-imports", "research/computations/U43/verify_u43.py", "research/computations/U43/discover_u43.py"],
+    "returncode": 1,
+    "runtime_seconds": 0.610174,
+    "log": "typecheck.log",
+    "status": "unavailable"
+  }
+}

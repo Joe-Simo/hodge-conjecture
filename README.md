@@ -4,7 +4,19 @@ Private working repository for a rigorous attempt to resolve the rational Hodge 
 
 **Status: no complete proof or counterexample has been verified.**
 
-## Current checkpoint: U42 (2026-09-15)
+## Current checkpoint: U43 (2026-09-15)
+
+[U43: full tensor block and rational rank-one reduction](research/U43_full_tensor_block_and_rank_one_reduction.md) supplies a 31-term integral correspondence certificate connecting all 24 conjugate character motives. Combined with U42, this proves algebraicity of the full 576-dimensional W tensor W block on X x X, not just the 24 matched squares. Its new rational consequence is End_Chow(Wcal)=Mat_24(Q) and Wcal=N^(direct sum 24), with N a rational rank-one Chow motive satisfying N tensor N=L^4.
+
+No algebraic cycle representing the original target on X has been constructed. The remaining problem is a nonzero realized morphism L^2 -> N, equivalently trivializing T=N tensor L^(-2) itself, not its tensor square. Diagonal restriction and contraction with ambient surface classes were checked and do not furnish that morphism. A general invertible-motive classification found in the literature is conjectural and is not used.
+
+[Standalone exact checker](research/computations/U43/verify_u43.py), [verification](research/computations/U43/verification.json), [separate Wolfram check](research/computations/U43/independent_wolfram.json), [source and self-review](research/computations/U43/source_and_self_review.md), and [validation record](research/computations/U43/validation_status.json).
+
+Ten new tests and eight inherited U42 tests pass; all 24 differences and 576 mixed certificates are checked with exact integers. Syntax compilation passes. Ruff and mypy are unavailable in the current runtime, so lint and static type checking remain unperformed. The optional Smith discovery and separate stateless Wolfram check were corrected and rerun successfully; the discarded execution errors are documented. Mathematical review is by the same assistant, not a formal kernel or independent expert.
+
+**Next obligation:** construct a surface-supported source correspondence for N or a surface Z on X with nonzero W projection; do not confuse an algebraic projector on the product with an algebraic vector on X. Earlier mathematical files are preserved unchanged.
+
+## Preserved checkpoint: U42 (2026-09-15)
 
 [U42: algebraicity of the diagonal tensor-square block](research/U42_tensor_square_algebraicity.md) proves, using characteristic-zero Chow correspondences of Otsubo–Yamazaki and an exact integer certificate, that M_alpha tensor M_alpha is isomorphic to L^4 for the degree-70 target alpha=(1,20,24,42,61,62). Consequently the simultaneous 24-dimensional rational orbit block in H^8(X x X) is algebraic. This concerns codimension-four cycles on the product of two fourfolds, not the original codimension-two target on X.
 
