@@ -1,0 +1,33 @@
+{
+  "scope": "Exact finite certificates for the separately written U36 proof; not a proof of Hodge",
+  "base_commit": "7fea00517efe485776cadc7b482ff3f426b0ecc3",
+  "python_version": "3.13.5",
+  "sympy_version": "1.14.0",
+  "arithmetic": "integers and rationals; no floating-point geometry",
+  "alpha": [1, 20, 24, 42, 61, 62],
+  "relations": [[2, 2, -3, -1, -1, 1], [3, 0, -3, 1, -2, 1]],
+  "exponent_points": [[-4, 3, 3], [1, 0, 0], [0, 1, 0], [0, 0, 1], [-6, 3, 5], [0, 0, 0]],
+  "saturated_groebner_basis": ["z0**3*z3*z5 - z2**3*z4**2", "z0**2*z1**2*z5 - z2**3*z3*z4", "z0*z1**4*z5 - z2**3*z3**3", "z0*z3**2 - z1**2*z4", "z1**6*z4*z5 - z2**3*z3**5"],
+  "hilbert_numerator": "-t**8 + 3*t**7 - 2*t**5 - t**3 + 1",
+  "hilbert_h_polynomial": "-t**6 + t**5 + 3*t**4 + 3*t**3 + 3*t**2 + 2*t + 1",
+  "toric_threefold_degree": 12,
+  "normalized_polytope_volume": "12",
+  "surface_degree_at_70": 840,
+  "facets": [
+    {"vertices": [0, 1, 2], "inward_normal": [-3, -3, -2], "bound": -3},
+    {"vertices": [0, 1, 3, 4], "inward_normal": [-3, -2, -3], "bound": -3},
+    {"vertices": [0, 2, 5], "inward_normal": [3, 0, 4], "bound": 0},
+    {"vertices": [0, 4, 5], "inward_normal": [3, 1, 3], "bound": 0},
+    {"vertices": [1, 2, 5], "inward_normal": [0, 0, 1], "bound": 0},
+    {"vertices": [1, 3, 5], "inward_normal": [0, 1, 0], "bound": 0},
+    {"vertices": [3, 4, 5], "inward_normal": [1, 2, 0], "bound": 0}
+  ],
+  "triangle_anchor": [1, 2, 5],
+  "triangle_reached_vertices": [0, 1, 2, 3, 4, 5],
+  "tests_run": 8,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 0.20991266400000086,
+  "script_sha256": "b2548ceaf73cc202e923c1e79ddd89b822c9fa080361ef243da40c9ecf5b8dd4",
+  "proof_nonclaims": ["No formal verification or expert review", "No algebraicity result for alpha", "No exhaustive search of all surfaces"]
+}

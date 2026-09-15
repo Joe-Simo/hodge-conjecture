@@ -1,0 +1,14 @@
+test_01_target_and_saturation (__main__.CertificateTests.test_01_target_and_saturation) ... ok
+test_02_parametrization (__main__.CertificateTests.test_02_parametrization) ... ok
+test_03_saturation_and_degree (__main__.CertificateTests.test_03_saturation_and_degree) ... ok
+test_04_exact_faces (__main__.CertificateTests.test_04_exact_faces) ... ok
+test_05_anchor_propagation (__main__.CertificateTests.test_05_anchor_propagation) ... ok
+test_06_reducible_prism_is_not_certified (__main__.CertificateTests.test_06_reducible_prism_is_not_certified) ... ok
+test_07_anchor_and_nonempty_example (__main__.CertificateTests.test_07_anchor_and_nonempty_example) ... ok
+test_08_exact_volume (__main__.CertificateTests.test_08_exact_volume) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.150s
+
+OK
+Wrote /mnt/data/hodge-conjecture/research/computations/U36/verification.json

@@ -1,3 +1,5 @@
+> **Resolved negatively for this family by U36 (2026-09-15).** The lattice and dimension assertions below survive, but every nonzero-parameter member is an irreducible surface of class 12h^2, with zero primitive/alpha contribution. See [U36](U36_U35_uniform_vanishing.md) for the parameter-uniform proof, boundary audit, and exact checks. The original U35 research record is preserved below.
+
 # U35: correct-dimension saturated rank-2 toric surface lattice carrying alpha
 
 Status: exact lattice construction of a surface ansatz. Geometric nonemptiness/closure and nonzero alpha-period remain unproved. This does not solve the Hodge conjecture.

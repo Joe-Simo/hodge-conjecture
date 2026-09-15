@@ -1,0 +1,24 @@
+{
+  "scope": "Actual independent Wolfram Language results obtained in this run; arithmetic corroboration, not independent expert review.",
+  "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "saturation_call": {
+    "method": "GroebnerBasis[{f,g,t Times@@z-1},Join[{t},z],MonomialOrder->Lexicographic]; discard polynomials containing t",
+    "specialization": {"lambda": 1, "mu": 1},
+    "leading_exponents": [[0,6,0,0,1,1], [1,0,0,2,0,0], [1,4,0,0,0,1], [2,2,0,0,0,1], [3,0,0,1,0,1]],
+    "hilbert_h_coefficients_ascending": [1,2,3,3,3,1,-1],
+    "degree": 12,
+    "parametrization_checks": ["lambda", "mu"],
+    "target_congruence": [0,0,0,0,0,0],
+    "saturated_minor": -1
+  },
+  "geometry_call": {
+    "method": "Exact dot products for the six displayed triangular supporting facets, full-edge adjacency propagation, and determinants of centroid cones",
+    "facet_values": [[0,0,0,1,2,3], [0,3,0,4,2,0], [0,3,1,3,0,0], [3,0,0,1,5,0], [3,0,1,0,3,0], [2,1,2,0,0,0]],
+    "all_supporting": true,
+    "exactly_three_zeros_each": [3,3,3,3,3,3],
+    "triangle_chain_spans_all_vertices": true,
+    "normalized_volume": 12,
+    "anchor_squarefree_check": 1
+  },
+  "limitations": ["Uniform irreducibility and Chow-class conclusion are proved in U36, not certified by a formal kernel", "Local and Wolfram calculations use separately executed CAS implementations; the mathematical interpretation has only self-review"]
+}
