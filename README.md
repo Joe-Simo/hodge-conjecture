@@ -4,7 +4,19 @@ Private working repository for a rigorous attempt to resolve the rational Hodge 
 
 **Status: no complete proof or counterexample has been verified.**
 
-## Current checkpoint: U43 (2026-09-15)
+## Current checkpoint: U44 (2026-09-15)
+
+[U44: level-stable parity and an enlarged geometric-seed audit](research/U44_level_stable_parity_and_seed_obstruction.md) proves that the normalized degree70 target remains of exact order two in the formal reflection/multiplication quotient at every level70k and in its direct limit. A cyclic-subgroup parity argument covers all admissible multiplication divisors, not just the previously used generator list.
+
+At level420 a second explicit certificate, equal to one exactly on characters of additive order7 or21, still separates the target after adding all23307 surface Hodge quadruples, all39604 ordered Hodge pairs of curve character triples, and granting all27690 degree105 fourfold Hodge sextuples as additional relations. It excludes arbitrary-length integer combinations of these specified identities. This is a limitation of a formal construction method, **not** a nonalgebraicity theorem or an obstruction to arbitrary geometric correspondences.
+
+[Standalone checker](research/computations/U44/verify_u44.py), [finite certificate](research/computations/U44/verification.json), [independent Wolfram checks](research/computations/U44/independent_wolfram.json), [source and self-review](research/computations/U44/source_and_self_review.md), and [run manifest](research/computations/U44/run_manifest.json).
+
+Nine new tests and18 inherited U42/U43 tests pass; syntax compilation passes. Wolfram independently reproduces the main420 quadruple census by different loops and the curve-profile census. The full105 sextuple census was not independently reproduced in Wolfram; the combined call returned502. Ruff/mypy remain unavailable, so native lint/static type checking did not run successfully. The proof is self-reviewed, not formally or independently expert-verified.
+
+**Next obligation:** obtain an independently algebraic input outside the tested relation subgroup with an exact transport, or construct a supported correspondence yielding a nonzero realized map L^2 -> N. No original target cycle has been constructed. Do not repeat deeper cancellation only inside the subgroup U44 excludes; this does not close the separate geometric-support or coupled-factorization routes.
+
+## Preserved checkpoint: U43 (2026-09-15)
 
 [U43: full tensor block and rational rank-one reduction](research/U43_full_tensor_block_and_rank_one_reduction.md) supplies a 31-term integral correspondence certificate connecting all 24 conjugate character motives. Combined with U42, this proves algebraicity of the full 576-dimensional W tensor W block on X x X, not just the 24 matched squares. Its new rational consequence is End_Chow(Wcal)=Mat_24(Q) and Wcal=N^(direct sum 24), with N a rational rank-one Chow motive satisfying N tensor N=L^4.
 

@@ -1,0 +1,26 @@
+{
+  "first_successful_run": {
+    "Version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+    "AllAdmissibleDHCount": 8317,
+    "AllDHEven": true,
+    "AllReflectionsEven": true,
+    "TargetOrders": [70, 7, 35, 5, 70, 35],
+    "TargetParity": 1,
+    "IndependentDirectQuadrupleCensusCountAndOddCount": [23307, 0],
+    "ExtraDivisorSeedCountercheck": 1
+  },
+  "second_successful_run": {
+    "Version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+    "CurveTripleCount": 29400,
+    "ProfileCount": 27404,
+    "OrderedDualHodgePairs": 39604,
+    "AllProfileParitiesConstant": true
+  },
+  "intervening_failed_run": {
+    "scope": "combined direct degree105 sextuple census plus curve census",
+    "result": "ConnectorClientServerError: HTTP502 Upstream or external service errors",
+    "mathematical_result": null,
+    "used_as_evidence": false
+  },
+  "independence_limit": "Wolfram independently reproduces arithmetic, not the motivic implications. The full degree105 sextuple census was not independently reproduced in Wolfram."
+}

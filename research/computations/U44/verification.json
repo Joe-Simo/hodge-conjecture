@@ -1,0 +1,30 @@
+{
+  "status": "exact finite certificates checked; no algebraicity or nonalgebraicity claim",
+  "python": "3.13.5",
+  "arithmetic": "unbounded Python integers; F2 parity via integer remainder",
+  "level": 420,
+  "target": [
+    6,
+    120,
+    144,
+    252,
+    366,
+    372
+  ],
+  "dual_functional": "1 iff additive order is 7 or 21; ell -> 0",
+  "target_value": 1,
+  "reflection_count_including_duplicate_signs": 419,
+  "all_admissible_multiplication_count": 8317,
+  "hodge_quadruples_sorted": 23307,
+  "hodge_quadruples_sha256": "719ada81fcf951caa8060cbb7e3097864e1f43059c4854d54ebf770b91ff5462",
+  "curve_triples_sorted": 29400,
+  "curve_hodge_profile_groups": 27404,
+  "all_ordered_hodge_pairs_of_curve_triples": 39604,
+  "all_unordered_hodge_pairs_of_curve_triples": 19802,
+  "degree105_hodge_sextuples_sorted": 27690,
+  "degree105_hodge_sextuples_sha256": "c3d51a54473b7e7e48240d8f8a7e3ae6fa35c904df3aafa854019153c30748f9",
+  "seed_parity_failures": 0,
+  "new_tests": 9,
+  "scope": "finite seed result only at level420; R/D-only theorem holds at all70k by separate proof",
+  "runtime_seconds": 5.56440295099992
+}

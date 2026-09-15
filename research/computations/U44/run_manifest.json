@@ -1,0 +1,72 @@
+{
+  "base_commit": "f7d6581d58f28b4faffee0366b0907b1a3a20223",
+  "proof_status": "self-reviewed formal-calculus result; no Hodge solution",
+  "commands": {
+    "new": "python research/computations/U44/verify_u44.py --output research/computations/U44/verification.json",
+    "U42": "python research/computations/U42/verify_u42.py",
+    "U43": "python research/computations/U43/verify_u43.py",
+    "syntax": "python -m py_compile research/computations/U44/*.py",
+    "lint": "python -m ruff check research/computations/U44",
+    "typecheck": "python -m mypy research/computations/U44/verify_u44.py"
+  },
+  "results": {
+    "new_tests_passed": 9,
+    "U42_passed": 8,
+    "U43_passed": 10,
+    "test_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "syntax_exit_code": 0,
+    "lint_exit_code": 1,
+    "lint_reason": "ruff is not installed",
+    "typecheck_exit_code": 1,
+    "typecheck_reason": "mypy is not installed"
+  },
+  "original_local_inputs_unchanged": true,
+  "independent_engine_limit": "Degree420 quadruples and curve profiles reproduced in Wolfram. Degree105 full sextuple census not independently reproduced there; combined call returned502.",
+  "discovery_scope": "Additional exploratory scripts and original-input inventory preserved in the downloadable U44 evidence archive; they are not imported by the standalone checker.",
+  "files": {
+    "research/U44_level_stable_parity_and_seed_obstruction.md": {
+      "sha256": "a60f317d883bd1e1f9bc7d91d40197f10754e39c70c2ca5c3c7b8d24d6c2323e",
+      "git_blob": "6497f0801b92acca8257cf9078abe6d85f121384"
+    },
+    "research/computations/U44/verify_u44.py": {
+      "sha256": "24f134d8af74751c7b05d251a1e8cdfa7c37cb797240b190e79502909617bc64",
+      "git_blob": "d4365de2af4bb9c4f9495a75e81d9aa158d31adc"
+    },
+    "research/computations/U44/verification.json": {
+      "sha256": "67ae5eb969f129dfc1e3776729b612a06f5eeffc64c289913fb9684b4a0e7b29",
+      "git_blob": "a55dc0a6693c24058a2ff056614455d486249045"
+    },
+    "research/computations/U44/independent_wolfram.wl": {
+      "sha256": "ce3a605fb23aefbba9f1d0f7cba379e8a5b270d92554467231831709d6b2d027",
+      "git_blob": "1377162532c56921896b252662f2225a27551577"
+    },
+    "research/computations/U44/independent_wolfram_curves.wl": {
+      "sha256": "59680c9acc8206c996eef850e852d900a5b08c0ed309ffe23ac01e58fd4cb7d3",
+      "git_blob": "91b5d5744337b132891b5ca7bf15ac0654e023ec"
+    },
+    "research/computations/U44/independent_wolfram.json": {
+      "sha256": "88f55eee94feedc4e498c3ca53b300776be90ca012786ade3dbbb5545c4dce29",
+      "git_blob": "05e4c5573041c99bd8a7d2df94133c7cc915ac43"
+    },
+    "research/computations/U44/source_and_self_review.md": {
+      "sha256": "3b7d485e0cfc2ca6cf60e119ccefb1ccc5d738810840f1405f47fc98556827bd",
+      "git_blob": "a6b49eb54935dd52dacfd71d4edc40e23c8483b6"
+    },
+    "research/computations/U44/test_run.log": {
+      "sha256": "5b6ba9bbda0a4626b47b889df76d4cd19d6239aad8f78cf0eb0424ecf9e0ee87",
+      "git_blob": "b9dfbd348468139e01917cfcd6dc0abed34fec9c"
+    },
+    "research/computations/U44/inherited_u42.log": {
+      "sha256": "7ae74b217d716c77035089e976083d819e323bc3894c66ebda1f450d43b3ab2a",
+      "git_blob": "dbd160205123174b26d852d033af4c6be36d4f67"
+    },
+    "research/computations/U44/inherited_u43.log": {
+      "sha256": "6f00523e518968d2264787a5005a9df244212f12c1387dadc2c3a777d760d94b",
+      "git_blob": "2754ccc441dd411b7ba9dde8ebf45556d40d164a"
+    }
+  }
+}
