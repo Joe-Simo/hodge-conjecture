@@ -1,0 +1,13 @@
+test_all_pair_obstructions (__main__.U48Tests.test_all_pair_obstructions) ... ok
+test_canonical_form_characters_and_profiles (__main__.U48Tests.test_canonical_form_characters_and_profiles) ... ok
+test_cyclic_models_and_genera (__main__.U48Tests.test_cyclic_models_and_genera) ... ok
+test_deck_kernel_and_degrees (__main__.U48Tests.test_deck_kernel_and_degrees) ... ok
+test_exact_crossed_maps (__main__.U48Tests.test_exact_crossed_maps) ... ok
+test_positive_pair_control (__main__.U48Tests.test_positive_pair_control) ... ok
+test_projector_kernel_character (__main__.U48Tests.test_projector_kernel_character) ... ok
+test_source_factor_assignments (__main__.U48Tests.test_source_factor_assignments) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.052s
+
+OK
