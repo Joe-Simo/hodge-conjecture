@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-15",
+  "base_commit": "bfdb70edaae96b5ec0aaef8782ab3baffd448826",
+  "status": "restricted formal theorem; original target cycle not constructed",
+  "new_tests": 7,
+  "inherited_tests": 27,
+  "inherited_test_breakdown": {
+    "U42": 8,
+    "U43": 10,
+    "U44": 9
+  },
+  "python": "3.13.5",
+  "wolfram": "15.0.1 Linux x86 64-bit",
+  "arithmetic": "exact integers; complete level420 profile census",
+  "small_triples": 1152,
+  "small_profiles": 332,
+  "small_profile_orbits": 35,
+  "certificate_units": [
+    11,
+    23,
+    37,
+    59,
+    71
+  ],
+  "certificate_failures": 0,
+  "boundary_dimensions": [
+    12,
+    3,
+    2,
+    12
+  ],
+  "boundary_hodge_sum": 2,
+  "boundary_psi": 1,
+  "syntax_passed": true,
+  "lint": "python -m ruff check: exit1, module not installed",
+  "typecheck": "python -m mypy: exit1, module not installed",
+  "review": "self-review, separate arithmetic implementation; no formal or independent expert proof",
+  "input_hashes_unchanged_across_final_tests": true,
+  "sha256": {
+    "research/U45_small_CM_source_certificate.md": "081fb87b6e81df5f32d0622c7a62af8c2c48c0291e8f0e8daeb25d20a3c955ef",
+    "research/computations/U45/verify_u45.py": "fa5b9327f2882f42590e96f8cc21729d38baecbbeb0bf0939f54933aa2190126",
+    "research/computations/U45/independent_wolfram.wl": "2a98df6cd17f4121c6fea9362927058fe9d00b08fb9db304b17bb68242ea8e76",
+    "research/computations/U45/independent_wolfram.json": "0810b9876ec84b66da60c59265f50237d7811b34aeda94d664d1799ef8ff3d5b",
+    "research/computations/U45/source_and_self_review.md": "5d33ddc71181b2252c3ed6ac25b803765bfc27c1c749a379c88c007e1c056e5a"
+  },
+  "additional_local_evidence": "Hodge_U45_evidence.zip contains the full manifest, actual test/validation logs, the corrected failed expectation log, and discovery code; not all archive-only files are committed"
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "Wolfram.WolframLanguageEvaluator",
+  "timeConstraint_seconds": 60,
+  "run_completed": true,
+  "arithmetic": "exact integers and rational orbit cardinalities; no floating arithmetic",
+  "Version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "Triples": 29400,
+  "Profiles": 27404,
+  "OrbitCountsByG": {"1":5,"2":2,"3":3,"4":5,"6":16,"8":4,"12":60,"24":170,"48":182},
+  "SmallTriples": 1152,
+  "SmallProfiles": 332,
+  "SmallTripleDimensionCounts": {"6":444,"2":100,"8":224,"4":200,"1":88,"3":96},
+  "FormulaFailureCount": 0,
+  "Dimension12Control": [12,0,1],
+  "BoundaryDimensions": [12,3,2,12],
+  "BoundaryHodgeProfileSum": [2],
+  "BoundaryParity": 1,
+  "review_limit": "Separate arithmetic implementation, not independent expert or formal geometric proof"
+}
