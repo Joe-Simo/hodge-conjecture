@@ -1,0 +1,13 @@
+test_all_parity_relations (__main__.Verification.test_all_parity_relations) ... ok
+test_certificate_negative_controls (__main__.Verification.test_certificate_negative_controls) ... ok
+test_complete_cocycle_case_dictionary (__main__.Verification.test_complete_cocycle_case_dictionary) ... ok
+test_every_unit_conjugate (__main__.Verification.test_every_unit_conjugate) ... ok
+test_full_integer_certificate (__main__.Verification.test_full_integer_certificate) ... ok
+test_secondary_surface_profiles (__main__.Verification.test_secondary_surface_profiles) ... ok
+test_source_admissibility_and_telescope (__main__.Verification.test_source_admissibility_and_telescope) ... ok
+test_target_and_square_orbits (__main__.Verification.test_target_and_square_orbits) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.296s
+
+OK

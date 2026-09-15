@@ -1,0 +1,15 @@
+test_01_complete_curve_population (__main__.U49Tests.test_01_complete_curve_population) ... ok
+test_02_all_diagonal_determinants (__main__.U49Tests.test_02_all_diagonal_determinants) ... ok
+test_03_all_nondiagonal_determinants (__main__.U49Tests.test_03_all_nondiagonal_determinants) ... ok
+test_04_diagonal_freeness_checks_all_powers (__main__.U49Tests.test_04_diagonal_freeness_checks_all_powers) ... ok
+test_05_nondiagonal_group_classification_inputs (__main__.U49Tests.test_05_nondiagonal_group_classification_inputs) ... ok
+test_06_integral_self_dual_coefficient (__main__.U49Tests.test_06_integral_self_dual_coefficient) ... ok
+test_07_ramified_and_fixed_orbit_controls (__main__.U49Tests.test_07_ramified_and_fixed_orbit_controls) ... ok
+test_08_target_remains_outside_reflections (__main__.U49Tests.test_08_target_remains_outside_reflections) ... ok
+test_09_worked_large_example (__main__.U49Tests.test_09_worked_large_example) ... ok
+test_10_fixed_source_cover_ramification (__main__.U49Tests.test_10_fixed_source_cover_ramification) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.366s
+
+OK
