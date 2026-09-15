@@ -1,0 +1,9 @@
+test_all_conic_join_character_orders (__main__.Checks.test_all_conic_join_character_orders) ... ok
+test_conic_join_factorization (__main__.Checks.test_conic_join_factorization) ... ok
+test_no_complementary_pairs (__main__.Checks.test_no_complementary_pairs) ... ok
+test_segre_factorization (__main__.Checks.test_segre_factorization) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.025s
+
+OK

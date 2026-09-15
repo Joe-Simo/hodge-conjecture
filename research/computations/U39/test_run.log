@@ -1,0 +1,17 @@
+test_all_unit_conjugates (__main__.U39Tests.test_all_unit_conjugates) ... ok
+test_corrupted_certificate_rejected (__main__.U39Tests.test_corrupted_certificate_rejected) ... ok
+test_cyclotomic_square_root (__main__.U39Tests.test_cyclotomic_square_root) ... ok
+test_decisive_prime_independent_additive_convolution (__main__.U39Tests.test_decisive_prime_independent_additive_convolution) ... ok
+test_eisenstein_and_cyclotomic_discriminant (__main__.U39Tests.test_eisenstein_and_cyclotomic_discriminant) ... ok
+test_exact_formal_gauss_certificate (__main__.U39Tests.test_exact_formal_gauss_certificate) ... ok
+test_finite_field_sign_benchmark (__main__.U39Tests.test_finite_field_sign_benchmark) ... ok
+test_five_existing_primes_and_wolfram (__main__.U39Tests.test_five_existing_primes_and_wolfram) ... ok
+test_holdout_primes (__main__.U39Tests.test_holdout_primes) ... ok
+test_radical_field_change_of_generator (__main__.U39Tests.test_radical_field_change_of_generator) ... ok
+test_same_kernel_candidate_is_rejected (__main__.U39Tests.test_same_kernel_candidate_is_rejected) ... ok
+test_target_orbit_and_character_kernel (__main__.U39Tests.test_target_orbit_and_character_kernel) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.692s
+
+OK

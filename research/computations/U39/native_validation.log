@@ -1,0 +1,81 @@
+=== Native static-validation tools ===
+/opt/pyvenv/bin/python: No module named ruff
+ruff_exit=1
+/opt/pyvenv/bin/python: No module named mypy
+mypy_exit=1
+
+=== Compile ===
+compile_exit=0
+
+=== Exact tests ===
+{
+  "tests": 12,
+  "passed": true,
+  "prime_rows": [
+    [
+      71,
+      7,
+      40,
+      10,
+      40,
+      0
+    ],
+    [
+      211,
+      2,
+      12,
+      24,
+      12,
+      0
+    ],
+    [
+      281,
+      3,
+      32,
+      64,
+      32,
+      0
+    ],
+    [
+      421,
+      2,
+      50,
+      30,
+      15,
+      35
+    ],
+    [
+      491,
+      2,
+      57,
+      44,
+      57,
+      0
+    ],
+    [
+      631,
+      3,
+      64,
+      58,
+      29,
+      35
+    ],
+    [
+      701,
+      2,
+      34,
+      68,
+      34,
+      0
+    ],
+    [
+      911,
+      17,
+      0,
+      0,
+      35,
+      35
+    ]
+  ]
+}
+tests_exit=0

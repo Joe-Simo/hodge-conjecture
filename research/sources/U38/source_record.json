@@ -1,0 +1,49 @@
+{
+  "date_checked": "2026-09-15",
+  "base_commit": "467188a3d6c10a08ab2476fc65c12d14c78771de",
+  "prompt_path_read": "/mnt/data/Hodge_Conjecture_Astra_Research_Prompt.txt",
+  "prompt_sha256": "0639b0689036cee1ed7a990147fba250ee3188d5bc3143dc2625e50d4d85bbb3",
+  "sources": [
+    {
+      "authors": "T. Shioda and T. Katsura",
+      "title": "On Fermat varieties",
+      "year": 1979,
+      "doi": "10.2748/tmj/1178229881",
+      "url": "https://www.jstage.jst.go.jp/article/tmj1949/31/1/31_1_97/_pdf",
+      "locator": "Section 3, (3.1)-(3.4), printed p.107 / PDF index10",
+      "verification": "Primary PDF read and normalization page inspected as screenshot",
+      "local_pdf_cache": "download failed; not claimed"
+    },
+    {
+      "authors": "J. S. Milne",
+      "title": "Lectures on Etale Cohomology",
+      "version": "2.21, 2013-03-22",
+      "url": "https://www.jmilne.org/math/CourseNotes/LEC.pdf",
+      "locator": "Sections21 and23; Remark23.7 at printed p.143 / PDF index142",
+      "verification": "Cycle-map construction read; Galois-invariance passage inspected as screenshot"
+    },
+    {
+      "authors": "K. S. Kedlaya",
+      "title": "Etale cohomology as a black box",
+      "url": "https://kskedlaya.org/weil-cohom/chapter-9.html",
+      "locator": "Proposition9.2.2 and Definition9.2.4",
+      "verification": "Good-reduction representation and Frobenius convention read"
+    },
+    {
+      "authors": "R. Jumagulov",
+      "title": "The Hodge conjecture for Fermat fourfolds of odd degree at most 199",
+      "arxiv": "2608.18134v1",
+      "url": "https://arxiv.org/html/2608.18134v1",
+      "role": "Discovery aid only; no new geometric claim imported; cubic benchmark recomputed"
+    },
+    {
+      "authors": "Stacks Project",
+      "url": "https://stacks.math.columbia.edu/tag/02T7",
+      "locator": "Cartier-divisor intersection; also tags02TK,02TV,095T,0EYQ",
+      "verification": "Explicit hypotheses checked in this or preserved U36 source audit"
+    }
+  ],
+  "novelty": "No global novelty claim",
+  "coefficient_regime": "Q cycle classes; complex Betti and ell-adic comparison; K=Q(zeta_70)",
+  "unchanged_U36_sha256": "5c86f7c4f95a250711b788240d0bcf01d6f724934029add5eafaa643b6d614cd"
+}

@@ -1,0 +1,10 @@
+{
+  "engine": "Wolfram Language 15.0.1 for Linux x86 (64-bit), July 2, 2026",
+  "date": "2026-09-15",
+  "integer_certificate_zero": true,
+  "rhs_exponents": [71, 32, 15, -7],
+  "tau_square_plus35_remainder": 0,
+  "prime_rows": [[71,7,40,10,40,0],[211,2,12,24,12,0],[281,3,32,64,32,0],[421,2,50,30,15,35],[491,2,57,44,57,0]],
+  "columns": ["prime","least_primitive_root","normalized_jacobi_exponent","D_character_exponent","C_character_exponent","residual_exponent"],
+  "scope": "Separate arithmetic engine, not an independent mathematical reviewer"
+}

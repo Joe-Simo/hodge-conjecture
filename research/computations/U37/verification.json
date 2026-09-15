@@ -1,0 +1,11 @@
+{
+  "tests": 4,
+  "passed": true,
+  "conic_join_configurations": 90,
+  "character_order_counts": {
+    "70": 78,
+    "35": 12
+  },
+  "arithmetic": "exact integers and polynomial identities",
+  "non_claim": "No cycle with a nonzero target projection constructed"
+}

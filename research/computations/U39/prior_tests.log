@@ -1,0 +1,17 @@
+test_all_conic_join_character_orders (baseline_U37.Checks.test_all_conic_join_character_orders) ... ok
+test_conic_join_factorization (baseline_U37.Checks.test_conic_join_factorization) ... ok
+test_no_complementary_pairs (baseline_U37.Checks.test_no_complementary_pairs) ... ok
+test_segre_factorization (baseline_U37.Checks.test_segre_factorization) ... ok
+test_all_24_galois_conjugate_sums_at_491 (baseline_U38.CertificateTests.test_all_24_galois_conjugate_sums_at_491) ... ok
+test_frobenius_sign_by_small_point_count (baseline_U38.CertificateTests.test_frobenius_sign_by_small_point_count) ... ok
+test_independent_wolfram_factor_vectors (baseline_U38.CertificateTests.test_independent_wolfram_factor_vectors) ... ok
+test_input_hypotheses (baseline_U38.CertificateTests.test_input_hypotheses) ... ok
+test_order70_certificate_at_491 (baseline_U38.CertificateTests.test_order70_certificate_at_491) ... ok
+test_permutation_and_character_inverse (baseline_U38.CertificateTests.test_permutation_and_character_inverse) ... ok
+test_target_hodge_orbit (baseline_U38.CertificateTests.test_target_hodge_orbit) ... ok
+test_two_algorithms_and_root_orders (baseline_U38.CertificateTests.test_two_algorithms_and_root_orders) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.713s
+
+OK
