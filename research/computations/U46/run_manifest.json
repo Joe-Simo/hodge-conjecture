@@ -1,0 +1,72 @@
+{
+  "checkpoint": "U46",
+  "date": "2026-09-15",
+  "recorded_utc": "2026-09-15T18:11:10.333584+00:00",
+  "base_commit": "8fff2a01be0453fc613c0776239085816c155fdd",
+  "base_tree": "bf208a331b48c381dab92aecb959a0bdad99dc80",
+  "workspace": "/mnt/data/hodge-conjecture",
+  "working_copy_kind": "conversation evidence workspace, not a git clone",
+  "mathematical_target": "rational Hodge conjecture; this checkpoint reduces only W_alpha to one mixed surface-product problem",
+  "proof_status": "self-reviewed restricted proof; not formal or independent expert verification",
+  "population": {
+    "units_mod70": 24,
+    "multipliers_per_surface": 69,
+    "valid_surface5_multipliers": 28,
+    "valid_surface7_multipliers": 30,
+    "self5_pairs": 784,
+    "self7_pairs": 900,
+    "mixed_pairs": 840,
+    "fixed_prime_field_or_numeric_sampling": false
+  },
+  "validation": {
+    "new_tests": 10,
+    "inherited_tests": 25,
+    "syntax_compilation_exit": 0,
+    "lint_exit": 1,
+    "lint_status": "unavailable: No module named ruff",
+    "typecheck_exit": 1,
+    "typecheck_status": "unavailable: No module named mypy",
+    "separate_wolfram": "completed and principal output agrees",
+    "original_input_files_changed": []
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "commands": [
+    "python research/computations/U46/verify_u46.py --output research/computations/U46/verification.json",
+    "python research/computations/U42/verify_u42.py",
+    "python research/computations/U43/verify_u43.py",
+    "python research/computations/U45/verify_u45.py",
+    "python -m py_compile research/computations/U46/verify_u46.py",
+    "python -m ruff check research/computations/U46/verify_u46.py",
+    "python -m mypy research/computations/U46/verify_u46.py"
+  ],
+  "artifact_sha256": {
+    "research/U46_explicit_Horikawa_product_reduction.md": "8ab14b046265206ef9b0066e8da8588e1ffd17fae8490e46ab11996fc439702e",
+    "research/computations/U46/independent_wolfram.json": "925cd753c50dd2b0398d159e566abb2e63ff2108fac02747e89de6cd012117c5",
+    "research/computations/U46/independent_wolfram.wl": "3fd53affa3f86b2b5a8d05d06cada987c4ade3dd9dde9c7e626c9fb65b6a3f94",
+    "research/computations/U46/inherited_u42.log": "c97513db50ef1759c239e30c6a6c6fd14b86aff5cd185acf32e8fb7cbac81fcb",
+    "research/computations/U46/inherited_u43.log": "b8acd5f4eee048e6854f6f391858a5f8be67e03294cfb203ea49ee69775a6e39",
+    "research/computations/U46/inherited_u45.log": "728f9de0cd2769549b6778c1b78ce61c7ed65ec50aa2f2486ba08dc1e478ad25",
+    "research/computations/U46/input_inventory.json": "027192f74bc3f0ebd18f9c19eb77663b907b1fd954cf5c57a200dcbeb78bee02",
+    "research/computations/U46/lint.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "research/computations/U46/lint.log": "8e82477b3db03a444d99ee30e62c4f5e7cf9fa472ea2b12ab858bf1d603fca2e",
+    "research/computations/U46/packaging_notes.log": "99cfa25682d2a9b4474d460dbd5f3ad818ea51f748a732363f6a22e0096bc716",
+    "research/computations/U46/restored_inputs.json": "2f06ff00b4b3b66decb86efc678aa8d5a018c1e70954640cbc5185bdb1a2fdcd",
+    "research/computations/U46/source_and_self_review.md": "67413fdf7694a59476df08fa0c4fa1cb72abb90939156ddd767267381b07b6f6",
+    "research/computations/U46/syntax.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/computations/U46/test_run.log": "c5f7b93e146630d391a4c515c48c35c3f1f226f999780c0da068b726059d24ac",
+    "research/computations/U46/typecheck.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "research/computations/U46/typecheck.log": "60367194b226236f8edbe2529be3f90cf047568ccf9506ea561e72bb114f63eb",
+    "research/computations/U46/verification.json": "0fd5081b037e06a2065ae8e468c6545724cdcde9ff34420cc18455f09ad11913",
+    "research/computations/U46/verify_u46.py": "8da8e72206dee4e56a296cac5d793d1df5441d75c3dd56ee349987df539d7582"
+  },
+  "limits": [
+    "The computation cannot prove algebraicity of the missing mixed block.",
+    "Current-run original J-STAGE PDF access failed; explicit comparison and modern primary source are used.",
+    "No full-paper PDFs redistributed.",
+    "No global novelty claim."
+  ]
+}

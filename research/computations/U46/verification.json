@@ -1,0 +1,169 @@
+{
+  "checkpoint": "U46",
+  "base_commit": "8fff2a01be0453fc613c0776239085816c155fdd",
+  "arithmetic": "exact integers/rationals and polynomial identities; no floats in claims",
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "success": true,
+  "runtime_seconds": 0.084,
+  "surface5": {
+    "weights": [
+      1,
+      1,
+      2,
+      5
+    ],
+    "degree": 10,
+    "singularity": "A4",
+    "b2": 33,
+    "picard_rank": 5,
+    "transcendental_orbits": {
+      "70": [
+        1,
+        22,
+        1
+      ],
+      "10": [
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  "surface7": {
+    "weights": [
+      1,
+      1,
+      2,
+      5
+    ],
+    "degree": 10,
+    "singularity": "A1",
+    "b2": 33,
+    "picard_rank": 3,
+    "transcendental_orbits": {
+      "70": [
+        1,
+        22,
+        1
+      ],
+      "14": [
+        1,
+        4,
+        1
+      ]
+    }
+  },
+  "balanced_ordered_pairs": [
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      17,
+      17
+    ],
+    [
+      19,
+      19
+    ],
+    [
+      23,
+      23
+    ],
+    [
+      27,
+      27
+    ],
+    [
+      29,
+      29
+    ],
+    [
+      31,
+      31
+    ],
+    [
+      33,
+      33
+    ],
+    [
+      37,
+      37
+    ],
+    [
+      39,
+      39
+    ],
+    [
+      41,
+      41
+    ],
+    [
+      43,
+      43
+    ],
+    [
+      47,
+      47
+    ],
+    [
+      51,
+      51
+    ],
+    [
+      53,
+      53
+    ],
+    [
+      57,
+      57
+    ],
+    [
+      59,
+      59
+    ],
+    [
+      61,
+      61
+    ],
+    [
+      67,
+      67
+    ],
+    [
+      69,
+      69
+    ]
+  ],
+  "rational_hodge_dimensions_codim2": {
+    "S5xS5": 55,
+    "S7xS7": 41,
+    "S5xS7": 41
+  },
+  "mixed_product_known_algebraic_dimension": 17,
+  "nonclaims": [
+    "No target cycle or correspondence is constructed.",
+    "The code does not prove the geometric comparison or source theorems.",
+    "The original rational Hodge conjecture remains unresolved."
+  ]
+}

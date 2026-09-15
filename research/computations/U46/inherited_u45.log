@@ -1,0 +1,100 @@
+test_01_domains_and_small_cm_control (__main__.U45Tests.test_01_domains_and_small_cm_control) ... ok
+test_02_full_population_and_orbit_census (__main__.U45Tests.test_02_full_population_and_orbit_census) ... ok
+test_03_complete_small_profile_certificate (__main__.U45Tests.test_03_complete_small_profile_certificate) ... ok
+test_04_deliberately_incomplete_certificate_fails (__main__.U45Tests.test_04_deliberately_incomplete_certificate_fails) ... ok
+test_05_all_classical_rows_and_target (__main__.U45Tests.test_05_all_classical_rows_and_target) ... ok
+test_06_exact_square_certificate (__main__.U45Tests.test_06_exact_square_certificate) ... ok
+test_07_boundary_word_is_hodge_and_formally_target (__main__.U45Tests.test_07_boundary_word_is_hodge_and_formally_target) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.412s
+
+OK
+{
+  "level": 420,
+  "base_commit": "bfdb70edaae96b5ec0aaef8782ab3baffd448826",
+  "unit_count": 96,
+  "sorted_triple_count": 29400,
+  "distinct_profiles": 27404,
+  "profile_orbits": 447,
+  "orbits_by_g": {
+    "1": 5,
+    "2": 2,
+    "3": 3,
+    "4": 5,
+    "6": 16,
+    "8": 4,
+    "12": 60,
+    "24": 170,
+    "48": 182
+  },
+  "small_g_cutoff": 8,
+  "small_profiles": 332,
+  "small_profile_orbits": 35,
+  "small_triples": 1152,
+  "small_triples_by_g": {
+    "1": 88,
+    "2": 100,
+    "3": 96,
+    "4": 200,
+    "6": 444,
+    "8": 224
+  },
+  "five_certificate_units": [
+    11,
+    23,
+    37,
+    59,
+    71
+  ],
+  "certificate_failures": 0,
+  "certificate_table_serialization": "sorted triple:hex(full96bitprofile):g\\n",
+  "certificate_table_sha256": "6d30d5187e836dc6f5b2fe34f132c983085eb6188bf612fcbf71491acf987474",
+  "broken_certificate_witness": [
+    7,
+    35,
+    378
+  ],
+  "dimension12_counterexample": {
+    "triple": [
+      2,
+      140,
+      278
+    ],
+    "psi": 0,
+    "formula": 1
+  },
+  "odd_hodge_boundary_word_level70": [
+    [
+      24,
+      61,
+      55
+    ],
+    [
+      20,
+      15,
+      35
+    ],
+    [
+      35,
+      42,
+      63
+    ],
+    [
+      7,
+      62,
+      1
+    ]
+  ],
+  "boundary_profile_dimensions": [
+    12,
+    3,
+    2,
+    12
+  ],
+  "tests": 7,
+  "python": "3.13.5",
+  "self_review_only": true,
+  "source_theorems_machine_verified": false,
+  "elapsed_seconds": 1.449
+}

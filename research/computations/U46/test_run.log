@@ -1,0 +1,15 @@
+test_all_projective_singularities (__main__.ExactSurfaceTests.test_all_projective_singularities) ... ok
+test_all_transcendental_product_hodge_classes (__main__.ExactSurfaceTests.test_all_transcendental_product_hodge_classes) ... ok
+test_canonical_fibration_distinction (__main__.ExactSurfaceTests.test_canonical_fibration_distinction) ... ok
+test_exact_character_annihilators (__main__.ExactSurfaceTests.test_exact_character_annihilators) ... ok
+test_first_coordinate_quotients (__main__.ExactSurfaceTests.test_first_coordinate_quotients) ... ok
+test_picard_rank_witness_matrices (__main__.ExactSurfaceTests.test_picard_rank_witness_matrices) ... ok
+test_profiles_and_matching (__main__.ExactSurfaceTests.test_profiles_and_matching) ... ok
+test_projective_models_and_holomorphic_characters (__main__.ExactSurfaceTests.test_projective_models_and_holomorphic_characters) ... ok
+test_second_quotient_maps_and_kernels (__main__.ExactSurfaceTests.test_second_quotient_maps_and_kernels) ... ok
+test_shioda_map_and_no_tate_shift (__main__.ExactSurfaceTests.test_shioda_map_and_no_tate_shift) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.084s
+
+OK
