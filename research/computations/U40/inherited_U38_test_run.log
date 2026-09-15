@@ -1,0 +1,13 @@
+test_all_24_galois_conjugate_sums_at_491 (verify_u38.CertificateTests.test_all_24_galois_conjugate_sums_at_491) ... ok
+test_frobenius_sign_by_small_point_count (verify_u38.CertificateTests.test_frobenius_sign_by_small_point_count) ... ok
+test_independent_wolfram_factor_vectors (verify_u38.CertificateTests.test_independent_wolfram_factor_vectors) ... ok
+test_input_hypotheses (verify_u38.CertificateTests.test_input_hypotheses) ... ok
+test_order70_certificate_at_491 (verify_u38.CertificateTests.test_order70_certificate_at_491) ... ok
+test_permutation_and_character_inverse (verify_u38.CertificateTests.test_permutation_and_character_inverse) ... ok
+test_target_hodge_orbit (verify_u38.CertificateTests.test_target_hodge_orbit) ... ok
+test_two_algorithms_and_root_orders (verify_u38.CertificateTests.test_two_algorithms_and_root_orders) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.733s
+
+OK

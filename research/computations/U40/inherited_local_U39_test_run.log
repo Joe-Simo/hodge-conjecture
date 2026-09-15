@@ -1,0 +1,15 @@
+test_all_twenty_four_conjugates_at_491 (verify_u39.U39Checks.test_all_twenty_four_conjugates_at_491) ... ok
+test_cyclotomic_square_identity (verify_u39.U39Checks.test_cyclotomic_square_identity) ... ok
+test_delta_norm_and_valuation_arithmetic (verify_u39.U39Checks.test_delta_norm_and_valuation_arithmetic) ... ok
+test_exact_69_entry_identity_and_negative_control (verify_u39.U39Checks.test_exact_69_entry_identity_and_negative_control) ... ok
+test_gamma_normalization_sanity_not_proof (verify_u39.U39Checks.test_gamma_normalization_sanity_not_proof) ... ok
+test_gauss_and_gamma_scalar_exponents (verify_u39.U39Checks.test_gauss_and_gamma_scalar_exponents) ... ok
+test_prime_491_nonsquare_and_order (verify_u39.U39Checks.test_prime_491_nonsquare_and_order) ... ok
+test_symbolic_diagonal_isomorphism_and_field_recovery (verify_u39.U39Checks.test_symbolic_diagonal_isomorphism_and_field_recovery) ... ok
+test_ten_exact_prime_predictions_and_twists (verify_u39.U39Checks.test_ten_exact_prime_predictions_and_twists) ... ok
+test_wolfram_certificate_agreement (verify_u39.U39Checks.test_wolfram_certificate_agreement) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.567s
+
+OK

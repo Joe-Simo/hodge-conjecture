@@ -1,0 +1,13 @@
+test_all_galois_targets_fail_binary_and_balanced_support (verify_u41.U41Checks.test_all_galois_targets_fail_binary_and_balanced_support) ... ok
+test_clifford_idempotent_and_balanced_nonzero_control (verify_u41.U41Checks.test_clifford_idempotent_and_balanced_nonzero_control) ... ok
+test_explicit_retract_breaks_zero_of_parent (verify_u41.U41Checks.test_explicit_retract_breaks_zero_of_parent) ... ok
+test_nilpotent_idempotent_conjugacy_formula (verify_u41.U41Checks.test_nilpotent_idempotent_conjugacy_formula) ... ok
+test_odd_times_odd_tensor_trace_symbolically (verify_u41.U41Checks.test_odd_times_odd_tensor_trace_symbolically) ... ok
+test_partition_coverage_and_binary_support (verify_u41.U41Checks.test_partition_coverage_and_binary_support) ... ok
+test_unbalanced_variable_kills_balanced_retract_trace (verify_u41.U41Checks.test_unbalanced_variable_kills_balanced_retract_trace) ... ok
+test_univariate_endomorphism_relations_for_all_69_exponents (verify_u41.U41Checks.test_univariate_endomorphism_relations_for_all_69_exponents) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.189s
+
+OK

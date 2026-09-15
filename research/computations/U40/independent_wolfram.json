@@ -1,0 +1,62 @@
+{
+  "capture": "Transcribed from the successful WolframLanguageEvaluator response; input preserved verbatim apart from final newline.",
+  "timeConstraint_seconds": 30,
+  "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "SquaredRadicandsAgree": true,
+  "Degree35FieldsAgree": true,
+  "TauSquare": true,
+  "RemoteCRisC0SquaredTimesS35": true,
+  "RealDeltaResultantEqualsP12Squared": true,
+  "P12Irreducible": true,
+  "ResidualQuadraticRows": [
+    [
+      71,
+      60,
+      1,
+      0
+    ],
+    [
+      211,
+      169,
+      1,
+      0
+    ],
+    [
+      281,
+      141,
+      1,
+      0
+    ],
+    [
+      421,
+      157,
+      -1,
+      35
+    ],
+    [
+      491,
+      148,
+      1,
+      0
+    ],
+    [
+      631,
+      353,
+      -1,
+      35
+    ],
+    [
+      701,
+      91,
+      1,
+      0
+    ],
+    [
+      911,
+      884,
+      -1,
+      35
+    ]
+  ],
+  "limitation": "The pinned Jacobi exponents are comparison inputs, not independently recomputed Jacobi sums in this call."
+}

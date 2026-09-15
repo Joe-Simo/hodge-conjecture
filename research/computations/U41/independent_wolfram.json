@@ -1,0 +1,17 @@
+{
+  "capture": "Transcribed from the successful WolframLanguageEvaluator response; input preserved verbatim apart from final newline.",
+  "timeConstraint_seconds": 30,
+  "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "ToySquare": true,
+  "Idempotent": true,
+  "Even": true,
+  "Closed": true,
+  "TraceParent": "0",
+  "TraceSummand": "2*I",
+  "TraceComplement": "-2*I",
+  "UnivariateRelationsAll69": true,
+  "ProperSetPartitions": 202,
+  "AllEvenProperPartitions": 30,
+  "HasComplementaryPair": false,
+  "limitation": "Exact arithmetic corroboration, not independent expert verification of the uniform proof."
+}

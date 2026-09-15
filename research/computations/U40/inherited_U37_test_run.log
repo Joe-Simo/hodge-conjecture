@@ -1,0 +1,9 @@
+test_all_conic_join_character_orders (verify_u37.Checks.test_all_conic_join_character_orders) ... ok
+test_conic_join_factorization (verify_u37.Checks.test_conic_join_factorization) ... ok
+test_no_complementary_pairs (verify_u37.Checks.test_no_complementary_pairs) ... ok
+test_segre_factorization (verify_u37.Checks.test_segre_factorization) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.025s
+
+OK

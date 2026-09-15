@@ -1,0 +1,12 @@
+test_delignetype_and_formal_identity (verify_u40.U40Checks.test_delignetype_and_formal_identity) ... ok
+test_exact_quadratic_factor_relative_to_remote_convention (verify_u40.U40Checks.test_exact_quadratic_factor_relative_to_remote_convention) ... ok
+test_gamma_squareclass_identity (verify_u40.U40Checks.test_gamma_squareclass_identity) ... ok
+test_real_degree_twelve_coefficient (verify_u40.U40Checks.test_real_degree_twelve_coefficient) ... ok
+test_residual_quadratic_matches_pinned_frobenius_data (verify_u40.U40Checks.test_residual_quadratic_matches_pinned_frobenius_data) ... ok
+test_two_independent_radicand_reconciliations (verify_u40.U40Checks.test_two_independent_radicand_reconciliations) ... ok
+test_valuation_obstruction_and_recovery_identity (verify_u40.U40Checks.test_valuation_obstruction_and_recovery_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.235s
+
+OK

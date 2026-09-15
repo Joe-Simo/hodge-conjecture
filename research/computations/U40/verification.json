@@ -1,0 +1,119 @@
+{
+  "schema": "hodge-project-evidence-v1 (custom; no Mathbox schema-validation claim)",
+  "date": "2026-09-15",
+  "base_commit": "2b4835c05d27f039235fbab8898d7dcee12c9159",
+  "mathematical_status": "Restricted proof arguments plus exact arithmetic corroboration; no target cycle and no complete Hodge solution.",
+  "arithmetic": "Exact integers, rationals, cyclotomic QQ[x]/Phi70, finite prime fields, and polynomial matrices over QQ(i); no random sampling or numerical tolerances.",
+  "finite_coverage": {
+    "U40": "69-coordinate formal identity, all 24 unit characters, exact rational and cyclotomic identities, degree-12 resultant, eight pinned-prime quadratic comparisons.",
+    "U41": "203 set partitions (202 proper), all 24 target conjugates, 69 univariate exponent choices, 4x4 and 64x64 positive/negative matrix controls."
+  },
+  "proof_bridge": "U40 uses Deligne/Kubert-Lichtenbaum 1.6 and Kummer theory; U41 uses parity/degree, an explicit endomorphism algebra, ideal nilpotence and idempotent conjugacy. Finite tests do not supply their universal quantifiers.",
+  "passed_tests": {
+    "new": 15,
+    "inherited": 22
+  },
+  "formal_verification": false,
+  "independent_expert_review": false,
+  "wolfram": "Separate exact kernel checks with inputs and transcribed outputs preserved; not an independent proof review.",
+  "validation_record": "research/computations/U40/validation_status.json",
+  "ancestry": "Remote U39 is the exact_Kummer_subfield note at the pinned commit; inherited local U39 is the distinct explicit_splitting_field_and_twist note in the conversation artifact. Neither historical version is overwritten.",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 4989,
+      "sha256": "0daed0882c16986275a9e6c83763c30510beeceaa8205b81c387683dc2fd0b33",
+      "git_blob_sha": "7829da7289f239466b15b13863fb0bd32181a856"
+    },
+    {
+      "path": "research/U40_twist_reconciliation_and_normalization.md",
+      "bytes": 13067,
+      "sha256": "fc4ca9ecf4f6130491f03488d503354a38892343b4381b0af0731605d741d22e",
+      "git_blob_sha": "d94b1e2adcdf77b310ef00fc4da909dfcce04b7b"
+    },
+    {
+      "path": "research/U41_tensor_and_retract_obstructions.md",
+      "bytes": 15450,
+      "sha256": "baefd62ef0c63104a922c50aa0d687f5b4e64a11b0dfd79c0e4a18584496c2bd",
+      "git_blob_sha": "5231fbb547971c82fc33ebaea2655be0c50e8999"
+    },
+    {
+      "path": "research/computations/U40/verify_u40.py",
+      "bytes": 7446,
+      "sha256": "760a73774c7a884af70877a9c4c8d3c89e7ab01464b37a0b2a83ca7a19ab1f54",
+      "git_blob_sha": "044a59bcedbb258885bfbe623157968877dc37e6"
+    },
+    {
+      "path": "research/computations/U40/independent_wolfram.wl",
+      "bytes": 1329,
+      "sha256": "2848ceff04582ab932d859ab105aa4dc85dc6f6891acf222f0111c35bc432da3",
+      "git_blob_sha": "0c23b671d18f83d3da0beb5402e9e76584acf8bc"
+    },
+    {
+      "path": "research/computations/U40/independent_wolfram.json",
+      "bytes": 1003,
+      "sha256": "cfde7b434d09ebf5af7f2a2b95998ebf15f41cc7ed3e5996f688295c911fc5b4",
+      "git_blob_sha": "4a86db1f774da9622b01450a1e62306fcdedef1f"
+    },
+    {
+      "path": "research/computations/U40/test_run.log",
+      "bytes": 932,
+      "sha256": "dfe6684b2061451c151894b923d237676cc4de41a7ce81b8a5cf0ba89c7b3733",
+      "git_blob_sha": "651df4110700c84ebee8fcd0c7aa4f18fc08191e"
+    },
+    {
+      "path": "research/computations/U41/verify_u41.py",
+      "bytes": 7913,
+      "sha256": "0fff961a891cacb16219ce0f0451c75dec89496206fb03f0f2270b297c0c729d",
+      "git_blob_sha": "70fa3096a79078dce0649d9cd840027ab1d690c6"
+    },
+    {
+      "path": "research/computations/U41/independent_wolfram.wl",
+      "bytes": 1269,
+      "sha256": "b6e3cf395b13b9d6184ba3d72d21ee99ac109c381ab3094aebf812c6bb3c9e83",
+      "git_blob_sha": "52a502573a9b5a61ba0230f0ae0c97f79aaddac2"
+    },
+    {
+      "path": "research/computations/U41/independent_wolfram.json",
+      "bytes": 624,
+      "sha256": "3c81cddcb21e4669343bdd6fddf19f3562cdad2088da80310153335130a95fd4",
+      "git_blob_sha": "18d089c3ff8ab4a34d3c78b49244eb7a48c0ac2c"
+    },
+    {
+      "path": "research/computations/U41/test_run.log",
+      "bytes": 1140,
+      "sha256": "c54f009bf1a0eda4082cc34d38a8343a3208e7a2208338750ecef05f4bac45b6",
+      "git_blob_sha": "846ecdf8aee3214d425e4da6532c95647fa0f11f"
+    },
+    {
+      "path": "research/computations/U41/self_review.md",
+      "bytes": 2996,
+      "sha256": "9f6a9c6cb5b10d84a219b2effefce41f71619e2af42ea24a05dd6f34bc7cae43",
+      "git_blob_sha": "dd02907d9197d3ceaf105a306d2324778595754d"
+    },
+    {
+      "path": "research/computations/U40/validation_status.json",
+      "bytes": 3859,
+      "sha256": "5f3d00208ef722e4e667c7a23c8fcae6178a10d2fdb1becd8167fc5437d5891b",
+      "git_blob_sha": "25aa3a76bb76e8f23f24dfa5678f107fab159ad2"
+    },
+    {
+      "path": "research/computations/U40/inherited_local_U39_test_run.log",
+      "bytes": 1219,
+      "sha256": "51b9f13c784cdefc6dbef8c649890a63530b0ec23f2f07845712f01faa45961d",
+      "git_blob_sha": "652c4a3b3303fb84c795af7e4ab0b6412566ca2a"
+    },
+    {
+      "path": "research/computations/U40/inherited_U37_test_run.log",
+      "bytes": 446,
+      "sha256": "232c2f2ce8c5615306275621d3c3d0d3a678034a45a8f6e1ee4e406a4b7d9db3",
+      "git_blob_sha": "0e427ff0b9d28260e4f885e79ba04e24f1ce6223"
+    },
+    {
+      "path": "research/computations/U40/inherited_U38_test_run.log",
+      "bytes": 944,
+      "sha256": "c55610d3281fcc50c8b24230aa96d5d601f112044e9b30c348e1e4fd478e480e",
+      "git_blob_sha": "67571dccc76e28a339a4108beea90fe328fa41f2"
+    }
+  ]
+}

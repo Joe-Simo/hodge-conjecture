@@ -1,0 +1,144 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/hodge-conjecture",
+  "base_commit": "2b4835c05d27f039235fbab8898d7dcee12c9159",
+  "software": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "sympy": "1.14.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "runs": [
+    {
+      "scope": "U40",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/computations/U40",
+        "-p",
+        "verify_u40.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.236998,
+      "log": "research/computations/U40/test_run.log"
+    },
+    {
+      "scope": "U41",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/computations/U41",
+        "-p",
+        "verify_u41.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.186424,
+      "log": "research/computations/U41/test_run.log"
+    },
+    {
+      "scope": "U37",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/computations/U37",
+        "-p",
+        "verify_u37.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.943169,
+      "log": "research/computations/U40/inherited_U37_test_run.log"
+    },
+    {
+      "scope": "U38",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/computations/U38",
+        "-p",
+        "verify_u38.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.744639,
+      "log": "research/computations/U40/inherited_U38_test_run.log"
+    },
+    {
+      "scope": "U39 local inherited version",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/computations/U39",
+        "-p",
+        "verify_u39.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.5149,
+      "log": "research/computations/U40/inherited_local_U39_test_run.log"
+    },
+    {
+      "scope": "syntax",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "research/computations/U40/verify_u40.py",
+        "research/computations/U41/verify_u41.py"
+      ],
+      "exit_code": 0,
+      "log": "research/computations/U40/compile.log"
+    },
+    {
+      "scope": "lint",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "research/computations/U40/verify_u40.py",
+        "research/computations/U41/verify_u41.py"
+      ],
+      "exit_code": 1,
+      "log": "research/computations/U40/lint.log"
+    },
+    {
+      "scope": "static_type",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "mypy",
+        "--ignore-missing-imports",
+        "--check-untyped-defs",
+        "research/computations/U40/verify_u40.py",
+        "research/computations/U41/verify_u41.py"
+      ],
+      "exit_code": 1,
+      "log": "research/computations/U40/typecheck.log"
+    }
+  ],
+  "new_tests_passed": 15,
+  "inherited_tests_passed": 22,
+  "inherited_files_unchanged": 35,
+  "lint_status": "UNAVAILABLE: ruff is not installed; the actual invocation failed with No module named ruff. The earlier project-local installation attempt failed due to unavailable DNS.",
+  "typecheck_status": "UNAVAILABLE: mypy is not installed; the actual invocation failed with No module named mypy. The earlier project-local installation attempt failed due to unavailable DNS.",
+  "syntax_status": "Passed; this is not a static type check.",
+  "review": "Self-review only; Wolfram independently corroborates stated arithmetic, not the full proofs."
+}
