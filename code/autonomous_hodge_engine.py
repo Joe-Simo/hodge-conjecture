@@ -117,21 +117,23 @@ def run_cycle(state: dict[str, Any]) -> dict[str, Any]:
     print(f"Focus: Delsarte Character Orbits, W2 Witt Obstructions & Formal Proofs")
     print("=" * 75)
 
-    # Step 0: Jev Advisory
-    print(f"\n>>> [Step 0] JevGenius Hodge Advisory & Hypothesis Triage (Cycle {cycle})...")
-    try:
-        triage = jev_hodge.screen_candidate(
-            f"cycle_{cycle}_hodge_screen",
-            f"Auditing whether primitive Delsarte character orbits on degree 70 Fermat fourfold possess coherent sheaf algebraizations overcoming W2 Witt obstructions."
-        )
-        score = triage.get("answers", {}).get("viability_score", {}).get("score", "ok")
-        print(f"         [Step 0] Jev Triage completed successfully (viability score: {score}).")
-    except Exception as e:
-        print(f"         [Step 0] Jev call note: {e}")
+    # Step 0: Jev Advisory (Epoch-based every 10 cycles or initial cycle)
+    if cycle % 10 == 1 or cycle <= 2:
+        print(f"\n>>> [Step 0] JevGenius Hodge Advisory & Hypothesis Triage (Cycle {cycle})...")
+        try:
+            triage = jev_hodge.screen_candidate(
+                f"cycle_{cycle}_hodge_screen",
+                f"Auditing whether primitive Delsarte character orbits on degree 70 Fermat fourfold possess coherent sheaf algebraizations overcoming W2 Witt obstructions."
+            )
+            score = triage.get("answers", {}).get("viability_score", {}).get("score", "ok")
+            print(f"         [Step 0] Jev Triage completed successfully (viability score: {score}).")
+        except Exception as e:
+            print(f"         [Step 0] Jev call note: {e}")
 
-    # Step 1: OpenMP Delsarte Hodge Sieve
-    max_search = 200_000 + (cycle % 10) * 100_000
-    print(f"\n>>> [Step 1] OpenMP Hardware-Accelerated Delsarte Sieve (Search bound {max_search:,})...")
+    # Step 1: OpenMP High-Intensity Delsarte Hodge Sieve across degree spectrum
+    degrees = [70, 84, 105, 140, 210]
+    curr_deg = degrees[(cycle - 1) % len(degrees)]
+    print(f"\n>>> [Step 1] OpenMP Hardware-Accelerated Delsarte Sieve (Degree {curr_deg}, All 8 Cores)...")
     binary = REPO_ROOT / "code" / "delsarte_hodge_sieve"
     if not binary.exists():
         cmd = (
@@ -141,7 +143,7 @@ def run_cycle(state: dict[str, Any]) -> dict[str, Any]:
         )
         subprocess.run(cmd, shell=True, cwd=str(REPO_ROOT), check=True)
 
-    proc = subprocess.run([str(binary), "70", "2", str(max_search)], capture_output=True, text=True)
+    proc = subprocess.run([str(binary), str(curr_deg), "2", "10000000"], capture_output=True, text=True)
     if proc.returncode == 0:
         s_res = json.loads(proc.stdout.strip())
         print(f"         Tested {s_res['total_tested']:,} character orbits in {s_res['elapsed_seconds']:.4f}s ({s_res['tuples_per_second']:,.0f} tuples/s)")
@@ -286,7 +288,7 @@ def main() -> None:
             print(f"\n[Engine] Reached target max cycles ({args.max_cycles}). Stopping cleanly.")
             break
 
-        time.sleep(0.5)
+        time.sleep(0.02)
 
 
 if __name__ == "__main__":
