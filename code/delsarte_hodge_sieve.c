@@ -44,115 +44,134 @@ int main(int argc, char** argv) {
     if (degree > 255) degree = 255;
     if (dim != 2 && dim != 4) dim = 2;
 
+    int batch = (argc > 4) ? atoi(argv[4]) : 1;
+    if (batch < 1) batch = 1;
+
     int k = dim / 2;
-    int target_sum = (k + 1) * degree;
 
-    // Precompute units modulo degree
-    int units[256];
-    int n_units = 0;
-    for (int s = 1; s < degree; ++s) {
-        if (gcd(s, degree) == 1) {
-            units[n_units++] = s;
-        }
-    }
-
-    // Precompute L1 cache lookup table: rem_table[u][a] = (units[u] * a) % degree
-    // Fits entirely in L1 data cache (< 16 KB)
-    static uint8_t rem_table[256][256];
-    for (int u = 0; u < n_units; ++u) {
-        for (int a = 0; a <= degree; ++a) {
-            rem_table[u][a] = (uint8_t)((units[u] * a) % degree);
-        }
-    }
+    int64_t total_tested_all = 0;
+    int64_t total_hodge_all = 0;
+    int64_t total_primitive_all = 0;
+    int last_degree = degree;
+    int last_n_units = 0;
 
     double t0 = omp_get_wtime();
 
-    int64_t total_tested = 0;
-    int64_t total_hodge = 0;
-    int64_t total_primitive = 0;
+    for (int b = 0; b < batch; ++b) {
+        int cur_deg = degree + b * ((dim == 4) ? 2 : 7);
+        if (cur_deg > 255) break;
+        last_degree = cur_deg;
 
-    #pragma omp parallel reduction(+:total_tested, total_hodge, total_primitive)
-    {
-        if (dim == 2) {
-            #pragma omp for schedule(dynamic, 100)
-            for (int a0 = 1; a0 < degree; ++a0) {
-                for (int a1 = 1; a1 < degree; ++a1) {
-                    for (int a2 = 1; a2 < degree; ++a2) {
-                        int rem = (a0 + a1 + a2) % degree;
-                        int a3 = (rem == 0) ? degree : (degree - rem);
+        int target_sum = (k + 1) * cur_deg;
 
-                        total_tested++;
-
-                        // Fast table-lookup Shioda Hodge condition (zero division/modulo)
-                        bool is_hodge = true;
-                        for (int u = 0; u < n_units; ++u) {
-                            const uint8_t* row = rem_table[u];
-                            int sum = row[a0] + row[a1] + row[a2] + row[a3];
-                            if (sum != target_sum) {
-                                is_hodge = false;
-                                break;
-                            }
-                        }
-
-                        if (is_hodge) {
-                            total_hodge++;
-                            // Check decomposability into pairs summing to 0 mod degree
-                            bool decomposable = ((a0 + a1) % degree == 0) ||
-                                                ((a0 + a2) % degree == 0) ||
-                                                ((a0 + a3) % degree == 0);
-                            if (!decomposable) {
-                                total_primitive++;
-                            }
-                        }
-                    }
-                }
+        // Precompute units modulo cur_deg
+        int units[256];
+        int n_units = 0;
+        for (int s = 1; s < cur_deg; ++s) {
+            if (gcd(s, cur_deg) == 1) {
+                units[n_units++] = s;
             }
-        } else if (dim == 4) {
-            // Fourfold: 6 coordinates a0..a5 with sum = 0 mod degree
-            #pragma omp for schedule(dynamic, 20)
-            for (int a0 = 1; a0 < degree; ++a0) {
-                for (int a1 = 1; a1 < degree; ++a1) {
-                    for (int a2 = 1; a2 < degree; ++a2) {
-                        for (int a3 = 1; a3 < degree; ++a3) {
-                            for (int a4 = 1; a4 < degree; ++a4) {
-                                int rem = (a0 + a1 + a2 + a3 + a4) % degree;
-                                int a5 = (rem == 0) ? degree : (degree - rem);
+        }
+        last_n_units = n_units;
 
-                                total_tested++;
+        // Precompute L1 cache lookup table: rem_table[u][a] = (units[u] * a) % cur_deg
+        uint8_t rem_table[256][256];
+        for (int u = 0; u < n_units; ++u) {
+            for (int a = 0; a <= cur_deg; ++a) {
+                rem_table[u][a] = (uint8_t)((units[u] * a) % cur_deg);
+            }
+        }
 
-                                bool is_hodge = true;
-                                for (int u = 0; u < n_units; ++u) {
-                                    const uint8_t* row = rem_table[u];
-                                    int sum = row[a0] + row[a1] + row[a2] + row[a3] + row[a4] + row[a5];
-                                    if (sum != target_sum) {
-                                        is_hodge = false;
-                                        break;
-                                    }
+        int64_t total_tested = 0;
+        int64_t total_hodge = 0;
+        int64_t total_primitive = 0;
+
+        #pragma omp parallel reduction(+:total_tested, total_hodge, total_primitive)
+        {
+            if (dim == 2) {
+                #pragma omp for schedule(dynamic, 100)
+                for (int a0 = 1; a0 < cur_deg; ++a0) {
+                    for (int a1 = 1; a1 < cur_deg; ++a1) {
+                        for (int a2 = 1; a2 < cur_deg; ++a2) {
+                            int rem = (a0 + a1 + a2) % cur_deg;
+                            int a3 = (rem == 0) ? cur_deg : (cur_deg - rem);
+
+                            total_tested++;
+
+                            bool is_hodge = true;
+                            for (int u = 0; u < n_units; ++u) {
+                                const uint8_t* row = rem_table[u];
+                                int sum = row[a0] + row[a1] + row[a2] + row[a3];
+                                if (sum != target_sum) {
+                                    is_hodge = false;
+                                    break;
                                 }
+                            }
 
-                                if (is_hodge) {
-                                    total_hodge++;
+                            if (is_hodge) {
+                                total_hodge++;
+                                bool decomposable = ((a0 + a1) % cur_deg == 0) ||
+                                                    ((a0 + a2) % cur_deg == 0) ||
+                                                    ((a0 + a3) % cur_deg == 0);
+                                if (!decomposable) {
                                     total_primitive++;
                                 }
                             }
                         }
                     }
                 }
+            } else if (dim == 4) {
+                #pragma omp for schedule(dynamic, 20)
+                for (int a0 = 1; a0 < cur_deg; ++a0) {
+                    for (int a1 = 1; a1 < cur_deg; ++a1) {
+                        for (int a2 = 1; a2 < cur_deg; ++a2) {
+                            for (int a3 = 1; a3 < cur_deg; ++a3) {
+                                for (int a4 = 1; a4 < cur_deg; ++a4) {
+                                    int rem = (a0 + a1 + a2 + a3 + a4) % cur_deg;
+                                    int a5 = (rem == 0) ? cur_deg : (cur_deg - rem);
+
+                                    total_tested++;
+
+                                    bool is_hodge = true;
+                                    for (int u = 0; u < n_units; ++u) {
+                                        const uint8_t* row = rem_table[u];
+                                        int sum = row[a0] + row[a1] + row[a2] + row[a3] + row[a4] + row[a5];
+                                        if (sum != target_sum) {
+                                            is_hodge = false;
+                                            break;
+                                        }
+                                    }
+
+                                    if (is_hodge) {
+                                        total_hodge++;
+                                        total_primitive++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
+
+        total_tested_all += total_tested;
+        total_hodge_all += total_hodge;
+        total_primitive_all += total_primitive;
     }
 
     double t1 = omp_get_wtime();
     double elapsed = t1 - t0;
-    double rate = (elapsed > 0.0) ? ((double)total_tested / elapsed) : 0.0;
+    double rate = (elapsed > 0.0) ? ((double)total_tested_all / elapsed) : 0.0;
 
     printf("{\n");
-    printf("  \"degree\": %d,\n", degree);
+    printf("  \"start_degree\": %d,\n", degree);
+    printf("  \"last_degree\": %d,\n", last_degree);
+    printf("  \"batch_count\": %d,\n", batch);
     printf("  \"dim\": %d,\n", dim);
-    printf("  \"units_count\": %d,\n", n_units);
-    printf("  \"total_tested\": %lld,\n", (long long)total_tested);
-    printf("  \"total_hodge\": %lld,\n", (long long)total_hodge);
-    printf("  \"total_primitive\": %lld,\n", (long long)total_primitive);
+    printf("  \"units_count\": %d,\n", last_n_units);
+    printf("  \"total_tested\": %lld,\n", (long long)total_tested_all);
+    printf("  \"total_hodge\": %lld,\n", (long long)total_hodge_all);
+    printf("  \"total_primitive\": %lld,\n", (long long)total_primitive_all);
     printf("  \"elapsed_seconds\": %.6f,\n", elapsed);
     printf("  \"tuples_per_second\": %.2f\n", rate);
     printf("}\n");

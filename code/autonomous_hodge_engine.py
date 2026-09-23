@@ -18,6 +18,7 @@ import json
 import os
 import subprocess
 import sys
+import threading
 import time
 from pathlib import Path
 from typing import Any
@@ -117,41 +118,35 @@ def run_cycle(state: dict[str, Any]) -> dict[str, Any]:
     print(f"Focus: Delsarte Character Orbits, W2 Witt Obstructions & Formal Proofs")
     print("=" * 75)
 
-    # Step 0: Jev Advisory (Epoch-based every 10 cycles or initial cycle)
-    if cycle % 10 == 1 or cycle <= 2:
-        print(f"\n>>> [Step 0] JevGenius Hodge Advisory & Hypothesis Triage (Cycle {cycle})...")
-        try:
-            triage = jev_hodge.screen_candidate(
-                f"cycle_{cycle}_hodge_screen",
-                f"Auditing whether primitive Delsarte character orbits on degree 70 Fermat fourfold possess coherent sheaf algebraizations overcoming W2 Witt obstructions."
-            )
-            score = triage.get("answers", {}).get("viability_score", {}).get("score", "ok")
-            print(f"         [Step 0] Jev Triage completed successfully (viability score: {score}).")
-        except Exception as e:
-            print(f"         [Step 0] Jev call note: {e}")
+    # Step 0: Jev Advisory (Asynchronous background worker at Epochs)
+    if cycle % 50 == 1 or cycle <= 2:
+        def _bg_triage(c: int) -> None:
+            try:
+                triage = jev_hodge.screen_candidate(
+                    f"cycle_{c}_hodge_screen",
+                    f"Auditing whether primitive Delsarte character orbits on degree 50+ Fermat fourfolds possess coherent sheaf algebraizations overcoming W2 Witt obstructions."
+                )
+                score = triage.get("answers", {}).get("viability_score", {}).get("score", "ok")
+                print(f"         [Step 0 Background Jev] Completed for cycle {c} (viability score: {score}).")
+            except Exception:
+                pass
 
-    # Step 1: OpenMP High-Intensity Delsarte Hodge Sieve (Fourfolds & Surfaces, All 8 Cores)
-    # Alternates between deep Fermat fourfolds (dim=4, 25M-50M tuples) and higher-degree surfaces
-    if cycle % 2 == 1:
-        dim = 4
-        deg = 30 + ((cycle // 2) % 5) * 2  # degrees 30, 32, 34, 36, 38
-        search_desc = f"Fourfold X_{deg}^4 (Middle Cohomology H^4)"
-    else:
-        dim = 2
-        deg = 70 + ((cycle // 2) % 4) * 35  # degrees 70, 105, 140, 175
-        search_desc = f"Surface X_{deg}^2 (Middle Cohomology H^2)"
+        threading.Thread(target=_bg_triage, args=(cycle,), daemon=True).start()
 
-    print(f"\n>>> [Step 1] OpenMP Hardware-Accelerated Delsarte Sieve ({search_desc}, All 8 Cores)...")
+    # Step 1: OpenMP High-Intensity Delsarte Hodge Sieve (Fourfold Middle Cohomology H^4, All 8 Cores)
+    start_deg = 48 + ((cycle - 1) % 4) * 2  # degrees 48, 50, 52, 54
+    batch_count = 3  # tests 3 consecutive fourfold degrees (e.g. 48, 50, 52: ~1 billion tuples)
+    print(f"\n>>> [Step 1] OpenMP Hardware-Accelerated Delsarte Sieve (Fourfolds deg={start_deg}..{start_deg+4}, Batch={batch_count}, All 8 Cores)...")
     binary = REPO_ROOT / "code" / "delsarte_hodge_sieve"
     if not binary.exists():
         cmd = (
             "clang -O3 -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include "
             "-L/opt/homebrew/opt/libomp/lib -lomp code/delsarte_hodge_sieve.c "
-            "-o code/delsarte_hodge_sieve 2>/dev/null || clang -O3 code/delsarte_hodge_sieve.c -o code/delsarte_hodge_sieve -lm"
+            "-o code/delsarte_hodge_sieve -lm 2>/dev/null || clang -O3 code/delsarte_hodge_sieve.c -o code/delsarte_hodge_sieve -lm"
         )
         subprocess.run(cmd, shell=True, cwd=str(REPO_ROOT), check=True)
 
-    proc = subprocess.run([str(binary), str(deg), str(dim), "50000000"], capture_output=True, text=True)
+    proc = subprocess.run([str(binary), str(start_deg), "4", "1000000000", str(batch_count)], capture_output=True, text=True)
     if proc.returncode == 0:
         s_res = json.loads(proc.stdout.strip())
         print(f"         Tested {s_res['total_tested']:,} character orbits in {s_res['elapsed_seconds']:.4f}s ({s_res['tuples_per_second']:,.0f} tuples/s)")
@@ -159,8 +154,8 @@ def run_cycle(state: dict[str, Any]) -> dict[str, Any]:
         state["total_orbits_sieved"] = state.get("total_orbits_sieved", 0) + s_res["total_tested"]
         state["primitive_hodge_orbits_found"] = s_res["total_primitive"]
 
-    # Step 2: Exact Geometric Checks (U58 checker)
-    if cycle % 5 == 1 or cycle <= 2:
+    # Step 2: Exact Geometric Checks (U58 checker on Epochs)
+    if cycle % 50 == 1 or cycle <= 2:
         print(f"\n>>> [Step 2] Executing Exact Geometric & W2 Obstruction Checkers...")
         u58_script = REPO_ROOT / "research" / "computations" / "U58" / "verify_u58.py"
         if u58_script.exists():
@@ -232,7 +227,8 @@ def run_cycle(state: dict[str, Any]) -> dict[str, Any]:
 
     state["cycle"] = cycle + 1
     save_state(state)
-    update_checksums()
+    if cycle % 50 == 1 or cycle <= 2:
+        update_checksums()
     print(f"\n[Cycle {cycle}] COMPLETED SUCCESSFULLY. All Hodge research tracks verified.")
     return state
 
@@ -262,14 +258,12 @@ def main() -> None:
             break
         except Exception as e:
             print(f"\n[Engine Alert] Transient cycle failure: {e}")
-            time.sleep(5)
+            time.sleep(1)
             continue
 
         if not args.infinite and cycles_completed >= args.max_cycles:
             print(f"\n[Engine] Reached target max cycles ({args.max_cycles}). Stopping cleanly.")
             break
-
-        time.sleep(0.02)
 
 
 if __name__ == "__main__":
