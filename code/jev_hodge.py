@@ -42,6 +42,11 @@ def build_questions() -> dict[str, Any]:
             true="Does not claim smooth deformation to W2, or resolves the quadratic Fermat defect mismatch",
             false="Assumes special-fiber semiregular conics or lines lift to W2 without checking deformation equations"
         ),
+        "avoids_k3_period_trap": jev.noul(
+            "Does the argument avoid claiming counterexamples on K3 surfaces or low-dimensional abelian varieties (Kim-Roush 2006 trap)?",
+            true="Respects Lefschetz (1,1) theorem on K3 surfaces and products of dimension <= 4",
+            false="Claims counterexamples on K3 surfaces or abelian varieties refuted by period domain constraints"
+        ),
         "viability_score": jev.score(
             "Score the research candidate's rigor and potential for Hodge Conjecture progress",
             criteria=[

@@ -36,4 +36,5 @@ Jev decisions that are fast, cheap, and mandatory:
 | `code/autonomous_hodge_engine.py` | High-throughput multi-core autonomous research daemon. |
 | `formalization/HodgeCycleLattice.lean` | Lean 4 machine-checked proof of primitive Hodge decomposition and intersection pairing. |
 | `sources/NO_GO_REGISTER.md` | Primary register of disproved conjectures, refuted frameworks, and mathematical barriers. |
+| `sources/FAILED_CALCULATIONS_REGISTER.md` | Authoritative register of refuted literature calculations, retracted papers, and excluded heuristics. |
 | `CHECKPOINT.json` | Persistent machine-readable project state. |
