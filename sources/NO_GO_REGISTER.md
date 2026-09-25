@@ -34,3 +34,10 @@ Authoritative register of disproved conjectures, refuted frameworks, and structu
 - **Status**: Certified in `research/U51_torus_coset_surface_obstruction.md`.
 - **Barrier**: All non-degenerate 4-tuples under coordinate torus actions produce components whose character projections violate the Hodge condition.
 - **Rule**: Torus-coset and linear coordinate subvarieties cannot span the primitive Hodge locus for the degree-70 Fermat orbit.
+
+## 3. External Claimed-Proof Audit
+
+### 3.1 Relative Secant Cycles and Hodge Classes v5 (2026)
+- **Status**: The general proof claim is not established by the preprint as written; see `research/U62_RSC_v5_secant_intersection_failure.md`.
+- **Failure**: Its RSC cycle uses `Sec^n(A^vee) ∩ A^vee` as a codimension-`n` cycle. By the paper's own definition, `Sec^n(A^vee)` contains `A^vee`, so this intersection has codimension zero. The paper's Appendix E.3 acknowledges the defect for `n=2` and supplies a different degeneracy-locus construction only for that case; no general `n≥3` replacement is given.
+- **Scope**: This invalidates the stated RSC dependency chain for Theorems 4, 5, 12, and 13. It does not refute the rational Hodge conjecture or the separately known abelian-fourfold cases.

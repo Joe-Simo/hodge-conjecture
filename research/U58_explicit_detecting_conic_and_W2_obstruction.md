@@ -174,4 +174,8 @@ The next constructive target is an actual perfect complex on the special fiber w
 - the exact mod-281 Fourier certificates 134 and 175;
 - the W_2 coefficient obstruction 81 versus 88.
 
+## Literature correction (2026-09-24)
+
+Kang (2016), Corollary 3.2, proves the rational Hodge conjecture for every four-dimensional Fermat variety `X_m^4`, all positive degrees; Remark 4.4(1) makes the unrestricted degree scope explicit. Thus the degree-70 target Hodge class is algebraic over `C`, even though this particular conic and its raw product do not lift as embedded subschemes to `W_2`. U58's obstruction is construction-specific and does not show that no other characteristic-zero cycle represents the target class. The theorem and exact notation translation are recorded in [U59](U59_kang_closes_degree70_fermat_fourfold.md).
+
 Python syntax compilation passes in the local runtime. Ruff and mypy are not installed there, so no lint/static-type success is claimed.

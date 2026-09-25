@@ -1,6 +1,6 @@
 # U55: p-adic formal lifting of the degree-70 target and the exact algebraization gap
 
-**Status:** a restricted positive formal-lifting result, conditional only on the previously preserved Shioda–Katsura supersingular identification of the special-fiber target block; the final algebraization step is not known and no characteristic-zero target cycle is constructed. This does not solve the Hodge conjecture.
+**Historical route status (2026-09-16; literature correction 2026-09-24):** this argument proves a restricted positive formal-lifting result, conditional only on the previously preserved Shioda–Katsura supersingular identification of the special-fiber target block. It does not itself construct a characteristic-zero cycle. Separately, Kang (2016), Corollary 3.2, proves the Hodge conjecture for every Fermat fourfold of every positive degree, so algebraicity of the `X_70^4` target class is already known. U55's formal-to-algebraic `K_0` step is not an open existence gap for that class and this does not solve the global Hodge conjecture.
 
 Date: 2026-09-16.
 
@@ -116,3 +116,9 @@ The arithmetic identity for the Adams projector was independently checked in Wol
     e_2(T)=(T^4-27T^3+202T^2-432T+256)/288.
 
 No claim of formal verification or independent expert review is made.
+
+## Literature correction (2026-09-24)
+
+Kang, *Refined Motivic Dimension of Some Fermat Varieties*, Bull. Aust. Math. Soc. 93 (2016), 223–230, DOI [10.1017/S0004972715001379](https://doi.org/10.1017/S0004972715001379), defines `X_m^n` as the Fermat hypersurface in `P^(n+1)`. Corollary 3.2 states the generalized Hodge conjecture for every Fermat variety of dimension three or four and every positive degree; Remark 4.4(1) explicitly notes that this proves the Hodge conjecture for `X_m^4` without a degree restriction. The project's six-coordinate hypersurface `X_70^4 ⊂ P^5_C` is exactly such a variety. Kang's theorem therefore supplies an algebraic cycle for the rational `(2,2)` class `lambda` whose special-fiber lift is studied here.
+
+This theorem establishes existence, not an explicit cycle with the precise special-fiber representative `z_1`, nor algebraization of the particular inverse-limit `K_0` element constructed above. The formal-lift calculation remains a valid construction-specific result; it is no longer needed to prove algebraicity of `lambda`.
